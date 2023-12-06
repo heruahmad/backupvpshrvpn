@@ -257,7 +257,7 @@ clear
 #download extra menu
 echo -e "$green[INFO]$NC Download extra menu"
 sleep 2
-wget https://raw.githubusercontent.com/sasak3/v4/main/updatefile.sh && chmod +x updatefile.sh && ./updatefile.sh
+wget https://raw.githubusercontent.com/sasak3/v4/main/ssh/update.sh && chmod +x update.sh && ./update.sh
 clear
 
 cat> /root/.profile << END
