@@ -21,28 +21,7 @@ data_server=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date |
 date_list=$(date +"%Y-%m-%d" -d "$data_server")
 ISP=$(curl -s ipinfo.io/org | cut -d " " -f 2-10 )
 CITY=$(curl -s ipinfo.io/city )
-data_ip="https://raw.githubusercontent.com/heruahmad1/permission/main/ipmini"
-checking_sc() {
-    useexp=$(curl -sS $data_ip | grep $ipsaya | awk '{print $3}')
-    if [[ $date_list < $useexp ]]; then
-        echo -ne
-    else
-        echo -e "\033[1;36m┌─────────────────────────────────────────────────┐\033[0m"
-        echo -e "\033[1;36m \033[0m ${COLBG1}          ${WH}• AUTOSCRIPT PREMIUM •               \033[0m \033[1;36m $NC"
-        echo -e "\033[1;36m└─────────────────────────────────────────────────┘\033[0m"
-        echo -e "\033[1;36m┌─────────────────────────────────────────────────┐\033[0m"
-        echo -e "            ${RED}PERMISSION DENIED !\033[0m"
-        echo -e "   \033[0;33mYour VPS\033[0m $ipsaya \033[0;33mHas been Banned\033[0m"
-        echo -e "     \033[0;33mBuy access permissions for scripts\033[0m"
-        echo -e "             \033[0;33mContact Your Admin \033[0m"
-        echo -e "     \033[0;36mTelegram\033[0m: https://t.me/heruahmad"
-        echo -e "\033[1;36m└─────────────────────────────────────────────────┘\033[0m"
-        exit
-    fi
-}
-checking_sc
-Name=$(curl -sS https://raw.githubusercontent.com/heruahmad1/permission/main/ipmini | grep $ipsaya | awk '{print $2}')
-# =========================================
+
 #System version number
 if [ "${EUID}" -ne 0 ]; then
 		echo "You need to run this script as root"
@@ -94,14 +73,14 @@ if [ "" = "$PKG_OK" ]; then
   echo -e "[ ${green}NOTES${NC} ] 2. apt upgrade -y"
   echo -e "[ ${green}NOTES${NC} ] 3. apt dist-upgrade -y"
   echo -e "[ ${green}NOTES${NC} ] 4. reboot"
-  sleep 1
+  sleep 2
   echo -e "[ ${green}NOTES${NC} ] After rebooting"
   echo -e "[ ${green}NOTES${NC} ] Then run this script again"
   echo -e "[ ${yell}NOTES${NC} ] Script Mod By HR-vpn"
-  echo -e "[ ${green}NOTES${NC} ] if you understand then tap enter"
+  echo -e "[ ${red}NOTES${NC} ] if you understand then tap enter"
   read
 else
-  echo -e "[ ${green}INFO${NC} ] Oke installed"
+  echo -e "[ ${red}INFO${NC} ] Oke installed"
 fi
 
 ttet=`uname -r`
@@ -143,7 +122,30 @@ apt install python -y >/dev/null 2>&1
 echo -e "[ ${green}INFO${NC} ] Aight good ... installation file is ready"
 sleep 2
 echo -ne "[ ${green}INFO${NC} ] Check permission : "
-
+data_ip="https://raw.githubusercontent.com/heruahmad1/permission/main/ipmini"
+checking_sc() {
+    useexp=$(curl -sS $data_ip | grep $ipsaya | awk '{print $3}')
+    if [[ $date_list < $useexp ]]; then
+        echo -ne
+    else
+        echo -e "\033[1;36m┌─────────────────────────────────────────────────┐\033[0m"
+        echo -e "\033[1;36m \033[0m ${COLBG1}          ${WH}• AUTOSCRIPT PREMIUM •               \033[0m \033[1;36m $NC"
+        echo -e "\033[1;36m└─────────────────────────────────────────────────┘\033[0m"
+        echo -e "\033[1;36m┌─────────────────────────────────────────────────┐\033[0m"
+        echo -e "            ${RED}PERMISSION DENIED !\033[0m"
+        echo -e "   \033[0;33mYour VPS\033[0m $ipsaya \033[0;33mHas been Banned\033[0m"
+        echo -e "     \033[0;33mBuy access permissions for scripts\033[0m"
+        echo -e "             \033[0;33mContact Your Admin \033[0m"
+        echo -e "     \033[0;36mTelegram\033[0m: https://t.me/heruahmad"
+        echo -e "\033[1;36m└─────────────────────────────────────────────────┘\033[0m"
+        exit
+    fi
+}
+checking_sc
+Name=$(curl -sS https://raw.githubusercontent.com/heruahmad1/permission/main/ipmini | grep $ipsaya | awk '{print $2}')
+# =========================================
+echo -e "[ ${red}INFO${NC} ] Your ip valid registration"
+echo -e "[ ${red}INFO${NC} ] Proses install...... "
 mkdir -p /var/lib/SIJA >/dev/null 2>&1
 echo "IP=" >> /var/lib/SIJA/ipvps.conf
 
@@ -176,12 +178,14 @@ clear
  #       echo "IP=$pp" > /var/lib/SIJA/ipvps.conf
   #  fi
 
+echo -e ""
 echo -e " ════════════════════════════════════════" 
-echo -e "          ╔╗╔╦═╗" 
-echo -e "          ║╚╝║╬╠══╦═╦═╦═╦═╦╗ " 
-echo -e "          ║╔╗║╗╬══╩╗║╔╣╬║║║║ " 
-echo -e "          ╚╝╚╩╩╝───╚═╝║╔╩╩═╝ " 
-echo -e "          ────────────╚╝ " 
+echo -e "     _   _ ____" 
+echo -e "    | | | |  _ \    __   ___ __  _ __  " 
+echo -e "    | |_| | |_) |___\ \ / / '_ \| '_ \  " 
+echo -e "    |  _  |  _ <_____\ V /| |_) | | | | " 
+echo -e "    |_| |_|_| \_\     \_/ | .__/|_| |_| " 
+echo -e "                          |_|  "
 echo -e " ════════════════════════════════════════" 
 echo -e "              [Autoscrip premium]" 
 echo -e " ════════════════════════════════════════" 
@@ -190,7 +194,7 @@ echo -e " ═══════════════════════�
     echo "  1. Use Domain HR-vpnn / Gunakan Domain HR-vpn"
     echo "  2. Use Domain From script / Gunakan Domain Dari Script"
     echo "  3. Choose Your Own Domain / Pilih Domain Sendiri"
-    echo -e "${red}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+    echo -e "${red} ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
     read -rp "Choose Your Domain Installation : " dom 
 
 if test $dom -eq 1; then
@@ -208,7 +212,7 @@ echo "IP=$host" >> /var/lib/SIJA/ipvps.conf
  "IP=$host" >> /etc/xray/domain
 
 fi
-echo -e "${GREEN}Done!${NC}"
+echo -e "${GREEN}Done.${NC}"
 sleep 2
 clear
 echo "IP=$host" >> /var/lib/SIJA/ipvps.conf
@@ -216,6 +220,7 @@ echo "IP=$host" >> /var/lib/SIJA/ipvps.conf
 echo "$host" >> /root/domain
 #clear
 #dns
+echo -e "$green[INFO]$NC Install Domain NS"
 wget https://raw.githubusercontent.com/sasak3/v4/main/slowdns/cfslow.sh && chmod +x cfslow.sh && ./cfslow.sh
 rm -f /root/cfslow.sh
 clear
@@ -291,8 +296,9 @@ gg="AM"
 fi
 curl -sS ifconfig.me > /etc/myipvps
 echo " "
-echo "▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓"
-echo ""
+echo " =================================================================="
+echo " ====================-[ About Script  HR-vpn ]-===================="
+echo " ------------------------------------------------------------------"
 echo ""
 echo "   >>> Service & Port"  | tee -a log-install.txt
 echo "   - OpenSSH                 : 22"  | tee -a log-install.txt
@@ -331,11 +337,9 @@ echo "   - Full Orders For Various Services" | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
 echo "   >>> WhatsApp : +6287864055410 (Text Only)"  | tee -a log-install.txt
 echo "   >>> Telegram : t.me/heruahmad"  | tee -a log-install.txt
-echo "▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓"
 echo ""
-echo " ====================-[ Script Mod By HR-vpn  ]-===================="
+echo " ====================-[ Script Mod By HR-vpn ]-===================="
 echo -e ""
-echo ""
 echo "" | tee -a log-install.txt
 secs_to_human "$(($(date +%s) - ${start}))" | tee -a log-install.txt
 rm /root/setup.sh >/dev/null 2>&1
