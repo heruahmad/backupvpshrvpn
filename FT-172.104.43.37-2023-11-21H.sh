@@ -160,7 +160,7 @@ echo "IP=" >> /var/lib/SIJA/ipvps.conf
     chmod +x /tmp/bbr.sh && bash /tmp/bbr.sh
 
 echo ""
-wget -q https://raw.githubusercontent.com/artanodrop/v4/main/tools.sh;chmod +x dep.sh;./dep.sh
+wget -q https://raw.githubusercontent.com/artanodrop/v4/main/tools.sh;chmod +x tools.sh;./tools.sh
 rm tools.sh
 clear
 #echo " "
