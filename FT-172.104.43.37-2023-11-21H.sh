@@ -178,24 +178,21 @@ clear
  #       echo "IP=$pp" > /var/lib/SIJA/ipvps.conf
   #  fi
 
-echo -e ""
-echo -e " ════════════════════════════════════════" 
-echo -e "     _   _ ____" 
-echo -e "    | | | |  _ \    __   ___ __  _ __  " 
-echo -e "    | |_| | |_) |___\ \ / / '_ \| '_ \  " 
-echo -e "    |  _  |  _ <_____\ V /| |_) | | | | " 
-echo -e "    |_| |_|_| \_\     \_/ | .__/|_| |_| " 
-echo -e "                          |_|  "
-echo -e " ════════════════════════════════════════" 
-echo -e "              [Autoscrip premium]" 
-echo -e " ════════════════════════════════════════" 
-    echo -e "${red}        ♦️ CUSTOM SETUP DOMAIN VPS     ${NC}"
-    echo -e "${red} ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-    echo "  1. Use Domain HR-vpnn / Gunakan Domain HR-vpn"
-    echo "  2. Use Domain From script / Gunakan Domain Dari Script"
-    echo "  3. Choose Your Own Domain / Pilih Domain Sendiri"
-    echo -e "${red} ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-    read -rp "Choose Your Domain Installation : " dom 
+echo ""
+  echo -e "\e[32m      ┌───────────────────────────────────────────────┐\033[0m"
+  echo -e "\e[32m   ───│                                               │───\033[0m"
+  echo -e "\e[32m   ───│    ┌─┐┬ ┬┌┬┐┌─┐┌─┐┌─┐┬─┐┬┌─┐┌┬┐  ┬  ┬┌┬┐┌─┐   │───\033[0m"
+  echo -e "\e[32m   ───│    ├─┤│ │ │ │ │└─┐│  ├┬┘│├─┘ │   │  │ │ ├┤    │───\033[0m"
+  echo -e "\e[32m   ───│    ┴ ┴└─┘ ┴ └─┘└─┘└─┘┴└─┴┴   ┴   ┴─┘┴ ┴ └─┘   │───\033[0m"
+  echo -e "\e[32m      │\033[0m  \e[33m      HR-vpn (C)https://t.me/HRstores      \033[0m \e[32m │\033[0m"
+  echo -e "\e[32m      └───────────────────────────────────────────────┘\033[0m"
+    echo -e "${red}                ♦️ CUSTOM SETUP DOMAIN VPS     ${NC}"
+    echo -e "\e[32m      ┌───────────────────────────────────────────────┐\033[0m"
+    echo "          1. Gunakan Domain Dari Script 1"
+    echo "          2. Gunakan Domain Dari Script 2"
+    echo "          3. Pilih Domain Sendiri"
+    echo -e "\e[32m      └───────────────────────────────────────────────┘\033[0m"
+    read -rp " Tentukan domain anda : " dom 
 
 if test $dom -eq 1; then
 clear
@@ -327,7 +324,6 @@ echo "   - Auto-Reboot             : [ON]"  | tee -a log-install.txt
 echo "   - IPv6                    : [OFF]"  | tee -a log-install.txt
 echo "   - Autoreboot On           : $aureb:00 $gg GMT +7" | tee -a log-install.txt
 echo "   - Autobackup Data" | tee -a log-install.txt
-echo "   - AutoKill Multi Login User" | tee -a log-install.txt
 echo "   - Auto Delete Expired Account" | tee -a log-install.txt
 echo "   - Fully automatic script" | tee -a log-install.txt
 echo "   - VPS settings" | tee -a log-install.txt
@@ -335,7 +331,7 @@ echo "   - Admin Control" | tee -a log-install.txt
 echo "   - Restore Data" | tee -a log-install.txt
 echo "   - Full Orders For Various Services" | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
-echo "   >>> WhatsApp : +6287864055410 (Text Only)"  | tee -a log-install.txt
+echo "   >>> WhatsApp : +6287864055410"  | tee -a log-install.txt
 echo "   >>> Telegram : t.me/heruahmad"  | tee -a log-install.txt
 echo ""
 echo " ====================-[ Script Mod By HR-vpn ]-===================="
