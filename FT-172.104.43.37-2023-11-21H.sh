@@ -206,7 +206,7 @@ clear
 wget https://raw.githubusercontent.com/botak8/v4/main/backup/set-br.sh &&  chmod +x set-br.sh && ./set-br.sh
 clear
 wget https://raw.githubusercontent.com/sasak3/v4/main/xray/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
-wget https://raw.githubusercontent.com/botak8/v4/main/sshws/insshws.sh && chmod +x insshws.sh && ./insshws.sh
+wget https://raw.githubusercontent.com/sasak3/v4/main/sshws/insshws.sh && chmod +x insshws.sh && ./insshws.sh
 clear
 wget -q -O slow.sh https://raw.githubusercontent.com/Andyyuda/xray-ssh/main/slow.sh && chmod +x slow.sh && ./slow.sh
 clear
