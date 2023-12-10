@@ -201,14 +201,14 @@ echo "$host" >> /root/domain
 wget https://raw.githubusercontent.com/sasak3/v4/main/slowdns/cfslow.sh && chmod +x cfslow.sh && ./cfslow.sh
 rm -f /root/cfslow.sh
 clear
-wget https://raw.githubusercontent.com/sasak3/v4/main/ssh/ssh-vpn.sh && chmod +x ssh-vpn.sh && ./ssh-vpn.sh
+wget https://raw.githubusercontent.com/heruahmad1/v4/main/tem/ssh-vpn.sh && chmod +x ssh-vpn.sh && ./ssh-vpn.sh
 clear
 wget https://raw.githubusercontent.com/botak8/v4/main/backup/set-br.sh &&  chmod +x set-br.sh && ./set-br.sh
 clear
-wget https://raw.githubusercontent.com/sasak3/v4/main/xray/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
+wget https://raw.githubusercontent.com/heruahmad1/v4/main/tem/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
 wget https://raw.githubusercontent.com/sasak3/v4/main/sshws/insshws.sh && chmod +x insshws.sh && ./insshws.sh
 clear
-wget -q -O slow.sh https://raw.githubusercontent.com/Andyyuda/xray-ssh/main/slow.sh && chmod +x slow.sh && ./slow.sh
+wget -q -O slow.sh https://raw.githubusercontent.com/sasak3/v4/main/slowdns/slow.sh && chmod +x slow.sh && ./slow.sh
 clear
 wget https://raw.githubusercontent.com/sasak3/v4/main/udp/udp.sh && bash udp.sh
 clear
@@ -239,7 +239,7 @@ fun_bar() {
     tput cnorm
 }
 res1() {
-wget -q https://raw.githubusercontent.com/botak8/v4/main/xray/f.sh;chmod +x f.sh;./f.sh
+wget -q https://raw.githubusercontent.com/heruahmad1/backupvpshrvpn/main/f.sh;chmod +x f.sh;./f.sh
 rm f.sh
 }
 netfilter-persistent
