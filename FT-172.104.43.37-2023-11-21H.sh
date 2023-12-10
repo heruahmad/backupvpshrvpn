@@ -159,25 +159,12 @@ echo "IP=" >> /var/lib/SIJA/ipvps.conf
     wget -qO /tmp/bbr.sh "${REPO}server/bbr.sh" >/dev/null 2>&1
     chmod +x /tmp/bbr.sh && bash /tmp/bbr.sh
 
+  
 echo ""
-wget -q https://raw.githubusercontent.com/artanodrop/v4/main/tools.sh;chmod +x tools.sh;./tools.sh
-rm tools.sh
+wget -q https://raw.githubusercontent.com/sasak3/v4/main/dep.sh;chmod +x dep.sh;./dep.sh
+rm dep.sh
 clear
-#echo " "
-#read -rp "Input ur domain : " -e pp
-   # if [ -z $pp ]; then
-   #     echo -e "
-   #     Nothing input for domain!
-    #    Then a random domain will be created"
-   #else
-   #     echo "$pp" > /root/scdomain
-#	echo "$pp" > /etc/xray/scdomain
-#	echo "$pp" > /etc/xray/domain
-#	echo "$pp" > /etc/v2ray/domain
-#	echo $pp > /root/domain
- #       echo "IP=$pp" > /var/lib/SIJA/ipvps.conf
-  #  fi
-
+clear
 echo ""
   echo -e "\e[32m      ┌───────────────────────────────────────────────┐\033[0m"
   echo -e "\e[32m   ───│                                               │───\033[0m"
@@ -186,11 +173,10 @@ echo ""
   echo -e "\e[32m   ───│    ┴ ┴└─┘ ┴ └─┘└─┘└─┘┴└─┴┴   ┴   ┴─┘┴ ┴ └─┘   │───\033[0m"
   echo -e "\e[32m      │\033[0m  \e[33m      HR-vpn (C)https://t.me/HRstores      \033[0m \e[32m │\033[0m"
   echo -e "\e[32m      └───────────────────────────────────────────────┘\033[0m"
-    echo -e "${red}                ♦️ CUSTOM SETUP DOMAIN VPS     ${NC}"
+    echo -e "${red}                ♦️ CUSTOM SETUP DOMAIN VPS ♦️   ${NC}"
     echo -e "\e[32m      ┌───────────────────────────────────────────────┐\033[0m"
-    echo "          1. Gunakan Domain Dari Script 1"
-    echo "          2. Gunakan Domain Dari Script 2"
-    echo "          3. Pilih Domain Sendiri"
+    echo "          1. Gunakan Domain Dari Script"
+    echo "          2. Pilih Domain Sendiri"
     echo -e "\e[32m      └───────────────────────────────────────────────┘\033[0m"
     read -rp " Tentukan domain anda : " dom 
 
@@ -200,10 +186,6 @@ wget -q -O /root/cf.sh "https://raw.githubusercontent.com/sasak3/v4/main/slowdns
 chmod +x /root/cf.sh
 ./cf.sh
 elif test $dom -eq 2; then
-wget -q -O /root/cf1.sh "https://raw.githubusercontent.com/sasak3/v4/main/slowdns/cf1.sh"
-chmod +x /root/cf1.sh
-./cf1.sh
-elif test $dom -eq 3; then
 read -rp "Domain/Host: " -e host
 echo "IP=$host" >> /var/lib/SIJA/ipvps.conf
  "IP=$host" >> /etc/xray/domain
@@ -216,45 +198,53 @@ echo "IP=$host" >> /var/lib/SIJA/ipvps.conf
 #echo "IP=$host" >> /var/lib/scrz-prem/ipvps.conf
 echo "$host" >> /root/domain
 #clear
-#dns
-echo -e "$green[INFO]$NC Install Domain NS"
 wget https://raw.githubusercontent.com/sasak3/v4/main/slowdns/cfslow.sh && chmod +x cfslow.sh && ./cfslow.sh
 rm -f /root/cfslow.sh
 clear
-#install ssh ovpn
-echo -e "$green[INFO]$NC Install SSH"
-sleep 2
 wget https://raw.githubusercontent.com/sasak3/v4/main/ssh/ssh-vpn.sh && chmod +x ssh-vpn.sh && ./ssh-vpn.sh
 clear
-#Instal Xray
-echo -e "$green[INFO]$NC Install Xray"
-sleep 2
+wget https://raw.githubusercontent.com/botak8/v4/main/backup/set-br.sh &&  chmod +x set-br.sh && ./set-br.sh
+clear
 wget https://raw.githubusercontent.com/sasak3/v4/main/xray/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
+wget https://raw.githubusercontent.com/botak8/v4/main/sshws/insshws.sh && chmod +x insshws.sh && ./insshws.sh
 clear
-#instal websocket
-echo -e "$green[INFO]$NC Install websocket"
-sleep 2
-wget https://raw.githubusercontent.com/sasak3/v4/main/Sshws/insshws.sh && chmod +x insshws.sh && ./insshws.sh
+wget -q -O slow.sh https://raw.githubusercontent.com/Andyyuda/xray-ssh/main/slow.sh && chmod +x slow.sh && ./slow.sh
 clear
-#pasang rc clone ssh ovpn 
-echo -e "$green[INFO]$NC Install SET-BR"
-sleep 2
-wget https://raw.githubusercontent.com/sasak3/v4/main/backup/set-br.sh &&  chmod +x set-br.sh && ./set-br.sh >/dev/null 2>&1
-clear   
-#Instal slowdns
-echo -e "$green[INFO]$NC Install SowDNS"
-sleep 2
-wget -q -O slow.sh https://raw.githubusercontent.com/sasak3/v4/main/slowdns/slow.sh && chmod +x slow.sh && ./slow.sh
+wget https://raw.githubusercontent.com/sasak3/v4/main/udp/udp.sh && bash udp.sh
 clear
-#udp
-echo -e "$green[INFO]$NC Install UDP"
-sleep 2
-wget https://raw.githubusercontent.com/heruahmad1/v4/main/udp/udp.sh && bash udp.sh
+fun_bar() {
+    CMD[0]="$1"
+    CMD[1]="$2"
+    (
+        [[ -e $HOME/fim ]] && rm $HOME/fim
+        ${CMD[0]} -y >/dev/null 2>&1
+        ${CMD[1]} -y >/dev/null 2>&1
+        touch $HOME/fim
+    ) >/dev/null 2>&1 &
+    tput civis
+    echo -ne "  \033[0;33mPlease Wait Loading \033[1;37m- \033[0;33m["
+    while true; do
+        for ((i = 0; i < 18; i++)); do
+            echo -ne "\033[0;32m#"
+            sleep 0.1s
+        done
+        [[ -e $HOME/fim ]] && rm $HOME/fim && break
+        echo -e "\033[0;33m]"
+        sleep 1s
+        tput cuu1
+        tput dl1
+        echo -ne "  \033[0;33mPlease Wait Loading \033[1;37m- \033[0;33m["
+    done
+    echo -e "\033[0;33m]\033[1;37m -\033[1;32m OK !\033[1;37m"
+    tput cnorm
+}
+res1() {
+wget -q https://raw.githubusercontent.com/botak8/v4/main/xray/f.sh;chmod +x f.sh;./f.sh
+rm f.sh
+}
+netfilter-persistent
 clear
-#download extra menu
-echo -e "$green[INFO]$NC Download extra menu"
-sleep 2
-wget https://raw.githubusercontent.com/sasak3/v4/main/ssh/update.sh && chmod +x update.sh && ./update.sh
+fun_bar 'res1'
 clear
 
 cat> /root/.profile << END
@@ -292,55 +282,11 @@ else
 gg="AM"
 fi
 curl -sS ifconfig.me > /etc/myipvps
-echo " "
-echo " =================================================================="
-echo " ====================-[ About Script  HR-vpn ]-===================="
-echo " ------------------------------------------------------------------"
-echo ""
-echo "   >>> Service & Port"  | tee -a log-install.txt
-echo "   - OpenSSH                 : 22"  | tee -a log-install.txt
-echo "   - SSH Websocket           : 80" | tee -a log-install.txt
-echo "   - SSH SSL Websocket       : 443" | tee -a log-install.txt
-echo "   - SSH NON-SSL Websocket   : 80, 8880" | tee -a log-install.txt
-echo "   - SLOWDNS                 : 5300 [OFF]" | tee -a log-install.txt
-echo "   - Stunnel4                : 447, 777" | tee -a log-install.txt
-echo "   - Dropbear                : 109, 143" | tee -a log-install.txt
-echo "   - Badvpn                  : 7100-7900" | tee -a log-install.txt
-echo "   - Nginx                   : 81" | tee -a log-install.txt
-echo "   - XRAY  Vmess TLS         : 443" | tee -a log-install.txt
-echo "   - XRAY  Vmess None TLS    : 80" | tee -a log-install.txt
-echo "   - XRAY  Vless TLS         : 443" | tee -a log-install.txt
-echo "   - XRAY  Vless None TLS    : 80" | tee -a log-install.txt
-echo "   - Trojan GRPC             : 443" | tee -a log-install.txt
-echo "   - Trojan WS               : 443" | tee -a log-install.txt
-echo "   - Sodosok WS/GRPC         : 443" | tee -a log-install.txt
-echo ""  | tee -a log-install.txt
-echo "   >>> Server Information & Other Features"  | tee -a log-install.txt
-echo "   - Timezone                : Asia/Jakarta (GMT +7)"  | tee -a log-install.txt
-echo "   - Fail2Ban                : [ON]"  | tee -a log-install.txt
-echo "   - Dflate                  : [ON]"  | tee -a log-install.txt
-echo "   - IPtables                : [ON]"  | tee -a log-install.txt
-echo "   - Auto-Reboot             : [ON]"  | tee -a log-install.txt
-echo "   - IPv6                    : [OFF]"  | tee -a log-install.txt
-echo "   - Autoreboot On           : $aureb:00 $gg GMT +7" | tee -a log-install.txt
-echo "   - Autobackup Data" | tee -a log-install.txt
-echo "   - Auto Delete Expired Account" | tee -a log-install.txt
-echo "   - Fully automatic script" | tee -a log-install.txt
-echo "   - VPS settings" | tee -a log-install.txt
-echo "   - Admin Control" | tee -a log-install.txt
-echo "   - Restore Data" | tee -a log-install.txt
-echo "   - Full Orders For Various Services" | tee -a log-install.txt
-echo ""  | tee -a log-install.txt
-echo "   >>> WhatsApp : +6287864055410"  | tee -a log-install.txt
-echo "   >>> Telegram : t.me/heruahmad"  | tee -a log-install.txt
-echo ""
-echo " ====================-[ Script Mod By HR-vpn ]-===================="
-echo -e ""
-echo "" | tee -a log-install.txt
 secs_to_human "$(($(date +%s) - ${start}))" | tee -a log-install.txt
 rm /root/setup.sh >/dev/null 2>&1
 rm /root/ins-xray.sh >/dev/null 2>&1
 rm /root/insshws.sh >/dev/null 2>&1
+echo -ne "[ ${yell}WARNING${NC} ] proses install selesai..."
 echo -e "
 "
 echo -ne "[ ${yell}WARNING${NC} ] Do you want to reboot now ? (y/n)? "
