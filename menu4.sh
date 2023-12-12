@@ -346,17 +346,17 @@ NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/etc/xray/config.json")
     fi
 }
 clear
-echo -e " $COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e " $COLOR1│$NC \e[33m             • TROJAN MENU •       ${NC}"
-echo -e " $COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e " $COLOR1┌───────────────────────────────────────────────┐${NC}"
-$COLOR1 │$NC   \e[33m[1]  • CREATE TROJAN ACCOUNT ${NC}"
-$COLOR1 │$NC   \e[33m[2]  • TRIAL TROJAN          ${NC}"
-$COLOR1 │$NC   \e[33m[3]  • RENEW TROJAN          ${NC}"
-$COLOR1 │$NC   \e[33m[4]  • DELETE TROJAN         ${NC}"
-$COLOR1 │$NC   \e[33m[5]  • CHECK USER TROJAN   ${NC}"
-$COLOR1 │$NC   \e[33m[6]  • DETAIL TROJAN ACOUNT         ${NC}"
-$COLOR1 │$NC   \e[36m[0]  • BACK TO MENU       ${NC}"
+echo -e " $COLOR1│$NC \e[33m              • TROJAN MENU •       ${NC}"
+echo -e " $COLOR1└───────────────────────────────────────────────┘${NC}"
+echo -e " $COLOR1┌───────────────────────────────────────────────┐${NC}"
+echo -e "$COLOR1 │$NC   \e[33m[1]  • CREATE TROJAN ACCOUNT ${NC}"
+echo -e "$COLOR1 │$NC   \e[33m[2]  • TRIAL TROJAN ACCOUNT        ${NC}"
+echo -e "$COLOR1 │$NC   \e[33m[3]  • RENEW TROJAN ACCOUNT        ${NC}"
+echo -e "$COLOR1 │$NC   \e[33m[4]  • DELETE TROJAN ACCOUNT        ${NC}"
+echo -e "$COLOR1 │$NC   \e[33m[5]  • CHECK USER LOGIN ACCOUNT  ${NC}"
+echo -e "$COLOR1 │$NC   \e[33m[6]  • DETAIL TROJAN ACOUNT         ${NC}"
+echo -e "$COLOR1 │$NC   \e[36m[0]  • BACK TO MENU       ${NC}"
 echo -e " $COLOR1└───────────────────────────────────────────────┘${NC}"
 echo -e ""
 read -p " Select menu :  "  opt
