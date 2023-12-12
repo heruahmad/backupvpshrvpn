@@ -77,6 +77,7 @@ export BOLD="\e[1m"
 export WARNING="${RED}\e[5m"
 export UNDERLINE="\e[4m"
 
+clear
 function detailvmess(){
 clear
 MYIP=$(wget -qO- ipv4.icanhazip.com);
@@ -490,7 +491,7 @@ echo ""
 read -p " Select menu : " opt
 echo -e ""
 case $opt in
-1) clear ; add2 ;;
+1) clear ; add-ws ;;
 2) clear ; trialvmess ;;
 3) clear ; delws ;;
 4) clear ; renewws;;
