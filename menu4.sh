@@ -346,27 +346,26 @@ NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/etc/xray/config.json")
     fi
 }
 clear
-echo -e "$BICyan┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$BICyan│                    TROJAN MENU                  │$NC"
-echo -e "$BICyan└─────────────────────────────────────────────────┘${NC}"
-echo -e " $BICyan┌───────────────────────────────────────────────┐${NC}"
-echo -e "     ${BICyan}[${BIWhite}1${BICyan}] Create Trojan Account      "
-echo -e "     ${BICyan}[${BIWhite}2${BICyan}] Trial Trojan Account      "
-echo -e "     ${BICyan}[${BIWhite}3${BICyan}] Delete Account Trojan      "
-echo -e "     ${BICyan}[${BIWhite}4${BICyan}] Renew Account Trojan      "
-echo -e "     ${BICyan}[${BIWhite}5${BICyan}] Cek User Active XRAY     "
-echo -e "     ${BICyan}[${BIWhite}6${BICyan}] Cek Detail Trojan      "
-
-
-echo -e " ${BICyan}└──────────────────────────────────────────────┘${NC}"
-echo ""
-read -p " Select menu : " opt
+echo -e " $COLOR1┌─────────────────────────────────────────────────┐${NC}"
+echo -e " $COLOR1│$NC \e[33m             • TROJAN MENU •       ${NC}"
+echo -e " $COLOR1└─────────────────────────────────────────────────┘${NC}"
+echo -e " $COLOR1┌───────────────────────────────────────────────┐${NC}"
+$COLOR1 │$NC   \e[33m[1]  • CREATE TROJAN ACCOUNT ${NC}"
+$COLOR1 │$NC   \e[33m[2]  • TRIAL TROJAN          ${NC}"
+$COLOR1 │$NC   \e[33m[3]  • RENEW TROJAN          ${NC}"
+$COLOR1 │$NC   \e[33m[4]  • DELETE TROJAN         ${NC}"
+$COLOR1 │$NC   \e[33m[5]  • CHECK USER TROJAN   ${NC}"
+$COLOR1 │$NC   \e[33m[6]  • DETAIL TROJAN ACOUNT         ${NC}"
+$COLOR1 │$NC   \e[36m[0]  • BACK TO MENU       ${NC}"
+echo -e " $COLOR1└───────────────────────────────────────────────┘${NC}"
+echo -e ""
+read -p " Select menu :  "  opt
 echo -e ""
 case $opt in
 1) clear ; add-tr ;;
 2) clear ; trialtrojan ;;
-3) clear ; delws ;;
-4) clear ; renewws;;
+3) clear ; renewws ;;
+4) clear ; delws;;
 5) clear ; cekws ;;
 6) clear ; detailtrojan ;;
 0) clear ; menu ;;
