@@ -474,27 +474,26 @@ NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/etc/xray/config.json")
 }
 
 clear
-echo -e "${BICyan}┌─────────────────────────────────────────────────┐${NC}"
-echo -e "${BICyan}│                    VMESS MENU                   │$NC"
-echo -e "${BICyan}└─────────────────────────────────────────────────┘${NC}"
-echo -e "${BICyan}┌─────────────────────────────────────────────────┐${NC}"
-echo -e "     ${BICyan}[${COLOR1}1${BICyan}] Create Vmess Account     "
-echo -e "     ${BICyan}[${COLOR1}2${BICyan}] Trial Vmess Account     "
-echo -e "     ${BICyan}[${COLOR1}3${BICyan}] Delete Account Vmess     "
-echo -e "     ${BICyan}[${COLOR1}4${BICyan}] Renew Account Vmess     "
-echo -e "     ${BICyan}[${COLOR1}5${BICyan}] Cek User XRAY     "
-echo -e "     ${BICyan}[${COLOR1}6${BICyan}] Detail Vmess Account     "
+echo -e " $COLOR1┌─────────────────────────────────────────────────┐${NC}"
+echo -e " $COLOR1│$NC \e[33m                • VMESS MENU •       ${NC}"
+echo -e " $COLOR1└─────────────────────────────────────────────────┘${NC}"
+echo -e " $COLOR1┌───────────────────────────────────────────────┐${NC}"
+$COLOR1 │$NC   \e[33m[1]  • CREATE VMESS ACCOUNT ${NC}"
+$COLOR1 │$NC   \e[33m[2]  • TRIAL VMESS          ${NC}"
+$COLOR1 │$NC   \e[33m[3]  • RENEW VMESS          ${NC}"
+$COLOR1 │$NC   \e[33m[4]  • DELETE VMESS         ${NC}"
+$COLOR1 │$NC   \e[33m[5]  • CHECK USER VMESS    ${NC}"
+$COLOR1 │$NC   \e[33m[6]  • DETAIL VMESS ACOUNT         ${NC}"
+$COLOR1 │$NC   \e[36m[0]  • BACK TO MENU       ${NC}"
+echo -e " $COLOR1└───────────────────────────────────────────────┘${NC}"
 echo -e ""
-echo -e "     ${BICyan}[${COLOR1}0${BICyan}] Back To Menu     "
-echo -e "${BICyan}└──────────────────────────────────────────────────┘${NC}"
-echo ""
-read -p " Select menu : " opt
+read -p " Select menu :  "  opt
 echo -e ""
 case $opt in
 1) clear ; add-ws ;;
 2) clear ; trialvmess ;;
-3) clear ; delws ;;
-4) clear ; renewws;;
+3) clear ; renewws ;;
+4) clear ; delws;;
 5) clear ; cekws ;;
 6) clear ; detailvmess ;;
 0) clear ; menu ;;
