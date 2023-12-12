@@ -363,7 +363,7 @@ NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/etc/xray/config.json")
 }
 clear
 echo -e " $COLOR1┌───────────────────────────────────────────────┐${NC}"
-echo -e " $COLOR1│$NC \e[33m           • VLESS MENU •       ${NC}"
+echo -e " $COLOR1│$NC \e[33m              • VLESS MENU •       ${NC}"
 echo -e " $COLOR1└───────────────────────────────────────────────┘${NC}"
 echo -e " $COLOR1┌───────────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1 │$NC   \e[33m[1]  • CREATE VLESS ACCOUNT ${NC}"
