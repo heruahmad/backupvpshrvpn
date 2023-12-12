@@ -474,17 +474,17 @@ NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/etc/xray/config.json")
 }
 
 clear
-echo -e " $COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e " $COLOR1│$NC \e[33m                • VMESS MENU •       ${NC}"
-echo -e " $COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e " $COLOR1┌───────────────────────────────────────────────┐${NC}"
-$COLOR1 │$NC   \e[33m[1]  • CREATE VMESS ACCOUNT ${NC}"
-$COLOR1 │$NC   \e[33m[2]  • TRIAL VMESS          ${NC}"
-$COLOR1 │$NC   \e[33m[3]  • RENEW VMESS          ${NC}"
-$COLOR1 │$NC   \e[33m[4]  • DELETE VMESS         ${NC}"
-$COLOR1 │$NC   \e[33m[5]  • CHECK USER VMESS    ${NC}"
-$COLOR1 │$NC   \e[33m[6]  • DETAIL VMESS ACOUNT         ${NC}"
-$COLOR1 │$NC   \e[36m[0]  • BACK TO MENU       ${NC}"
+echo -e " $COLOR1│$NC \e[33m                • VMESS MENU •       ${NC}"
+echo -e " $COLOR1└───────────────────────────────────────────────┘${NC}"
+echo -e " $COLOR1┌───────────────────────────────────────────────┐${NC}"
+echo -e "$COLOR1 │$NC   \e[33m[1]  • CREATE VMESS ACCOUNT ${NC}"
+echo -e "$COLOR1 │$NC   \e[33m[2]  • TRIAL VMESS ACCOUNT         ${NC}"
+echo -e "$COLOR1 │$NC   \e[33m[3]  • RENEW VMESS ACCOUNT         ${NC}"
+echo -e "$COLOR1 │$NC   \e[33m[4]  • DELETE VMESS ACCOUNT         ${NC}"
+echo -e "$COLOR1 │$NC   \e[33m[5]  • CHECK USER LOGIN ACCOUNT   ${NC}"
+echo -e "$COLOR1 │$NC   \e[33m[6]  • DETAIL VMESS ACOUNT         ${NC}"
+echo -e "$COLOR1 │$NC   \e[36m[0]  • BACK TO MENU       ${NC}"
 echo -e " $COLOR1└───────────────────────────────────────────────┘${NC}"
 echo -e ""
 read -p " Select menu :  "  opt
