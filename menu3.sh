@@ -362,17 +362,17 @@ NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/etc/xray/config.json")
     fi
 }
 clear
-echo -e " $COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e " $COLOR1│$NC \e[33m           • VLESS MENU •       ${NC}"
-echo -e " $COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e " $COLOR1┌───────────────────────────────────────────────┐${NC}"
-$COLOR1 │$NC   \e[33m[1]  • CREATE VLESS ACCOUNT ${NC}"
-$COLOR1 │$NC   \e[33m[2]  • TRIAL VLESS          ${NC}"
-$COLOR1 │$NC   \e[33m[3]  • RENEW VLESS          ${NC}"
-$COLOR1 │$NC   \e[33m[4]  • DELETE VLESS         ${NC}"
-$COLOR1 │$NC   \e[33m[5]  • CHECK USER VLESS    ${NC}"
-$COLOR1 │$NC   \e[33m[6]  • DETAIL VLESS ACOUNT         ${NC}"
-$COLOR1 │$NC   \e[36m[0]  • BACK TO MENU       ${NC}"
+echo -e " $COLOR1│$NC \e[33m           • VLESS MENU •       ${NC}"
+echo -e " $COLOR1└───────────────────────────────────────────────┘${NC}"
+echo -e " $COLOR1┌───────────────────────────────────────────────┐${NC}"
+echo -e "$COLOR1 │$NC   \e[33m[1]  • CREATE VLESS ACCOUNT ${NC}"
+echo -e "$COLOR1 │$NC   \e[33m[2]  • TRIAL VLESS ACCOUNT         ${NC}"
+echo -e "$COLOR1 │$NC   \e[33m[3]  • RENEW VLESS ACCOUNT         ${NC}"
+echo -e "$COLOR1 │$NC   \e[33m[4]  • DELETE VLESS ACCOUNT        ${NC}"
+echo -e "$COLOR1 │$NC   \e[33m[5]  • CHECK USER LOGIN ACCOUNT    ${NC}"
+echo -e "$COLOR1 │$NC   \e[33m[6]  • DETAIL VLESS ACOUNT         ${NC}"
+echo -e "$COLOR1 │$NC   \e[36m[0]  • BACK TO MENU       ${NC}"
 echo -e " $COLOR1└───────────────────────────────────────────────┘${NC}"
 echo -e ""
 read -p " Select menu :  "  opt
